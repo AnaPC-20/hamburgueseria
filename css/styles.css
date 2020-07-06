@@ -1,0 +1,39 @@
+@import url(reset.css);/*Este se hace para importar el reset, es mejor hacerlo desde aqui*/
+/*hadlee y montserrat se cargan de google fonts como import*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;/*Esto es para safari*/
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    /*mozilla, opera, microsoft*/
+}
+
+:root{
+    --color-principal:#fa573a;
+    --color-secundario: #21242e;
+    --fuentePrincipal:'Montserrat', sans-serif;
+    --fuenteSecundaria:'Handlee', cursive;
+}
+
+body{
+    font-family:var(--fuentePrincipal) ;
+    font-size: 1em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
