@@ -175,3 +175,84 @@ footer a:hover {
         border-bottom: 0px;
     }
 }
+
+/* Inicio HERO */
+
+.hero {
+    background-image: url("../images/fondo.jpg");
+    /* ../ para subir carpeta */
+    height: 75vh;
+    background-repeat: no-repeat;
+    /* para que no repita la imagen */
+    background-size: cover;
+    /* para que la imagen cubra el 100% del espacio */
+    background-position: center center;
+    /*para centrar toda la imagen vertical y horizontal*/
+    background-color: #888;
+    /*creamos una capa de color gris para luego suionar, pero la imagen siempre va por encima*/
+    background-blend-mode: multiply;
+    /*para seleccionar modos de fusion de imagen*/
+    display: flex;
+    /*este me alineaa en la horizontak*/
+    align-items: center;
+    /*esto centra al centro centro*/
+}
+
+.hero .container {
+    width: 80%;
+    /*al añadir este with al 100% coloca el text en la izquierda porque el tecxto se alinea a la izquierda por defecto dentro de un contenedor*/
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.5em;
+    color: white;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.15em;
+}
+
+.boton {
+    display: inline-block;
+    /*lo ponemos para que el boton tenga voluminosoidad, con esto se comporta como bloque pero sigue siendo linea, y al reves.*/
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal);
+}
+
+.boton i {
+    transition: transform 0.5s;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.boton:hover i {
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+
+.hero .social li {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
