@@ -297,6 +297,8 @@ main section .underline hr {
     top: -0.063em/*para mover un poco la linea y que quede justo donde queremos*/
 }
 
+/*inicio ourservices*/
+
 main #ourservices .flex {
     flex-wrap: wrap;
     /*esto nos permite decir que ancho tiene cada elemento y que se posicionen 1, 2 o 3 en linea*/
@@ -357,4 +359,57 @@ main #ourservices .flex article h3 {
     main #ourservices .flex article:last-child {
         width: 33.33%;
     }
-    /* Fin MAIN */
+}
+
+/*fin de ourservices*/
+
+/*inicio about us*/
+
+main #aboutus .flex {
+    flex-direction: column;
+    /*Esto es para poner en columna*/
+}
+
+main #aboutus .flex .columna {
+    padding: 0.825em;
+}
+
+main #aboutus .flex .columna h3 {
+    font-weight: 700;
+}
+
+main #aboutus .flex .columna h4 {
+    color: var(--color-principal);
+    margin: 1em 0;
+}
+
+main #aboutus .marco {
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    /*Esto gira el marco y la foto */
+    width: 90%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    /*Esto sirve para contrarrestar el giro del marco solo en la imagen*/
+    transition: 1s;
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
+    transform: rotateZ(0deg);
+    /*Esto es para que lo aplique al marco y la imagen*/
+}
+
+@media(min-width:48.000em) {
+    main #aboutus .flex {
+        flex-direction: row;
+        /*paso el sistema flexible de columnas a filas en el primer breakpoint*/
+    }
+}
+
+/*fin about us*/
+
+/* Fin MAIN */
