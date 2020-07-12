@@ -36,6 +36,7 @@ body {
     /*Aqui estamos usando la variable fuente principal*/
     font-size: 1em;
     /*Tamaño de fuente para todo el body*/
+    background-color: var(--color-secundario);
 }
 
 img {
@@ -49,6 +50,7 @@ img {
     max-width: var(--anchoMaximo);
     margin: 0 auto;
     /*Esto centra el contenedor*/
+    color: white;
 }
 
 .flex {
@@ -58,12 +60,12 @@ img {
 /* Inicio HEADER */
 
 header .nav_top {
-    background-color: var(--color-secundario);
+    background-color: white;
     padding: 20px 10px;
 }
 
 header .nav_top a {
-    color: white;
+    color: var(--color-secundario);
     text-decoration: none;
     font-size: 120%;
 }
@@ -88,6 +90,7 @@ header nav {
 
 header .logo {
     max-width: 110px;
+    filter: invert(85%);
 }
 
 header .hamburguesa {
@@ -134,14 +137,14 @@ header nav ul li a:hover {
 /* Inicio FOOTER */
 
 footer {
-    background-color: var(--color-secundario);
+    background-color: white;
     padding: 1.250em 0.625em;
     text-align: center;
 }
 
 footer p, footer a {
     /*Estoy aplicando una regla a dos elementos*/
-    color: white;
+    color: var(--color-secundario);
 }
 
 footer a:hover {
@@ -175,88 +178,6 @@ footer a:hover {
         border-bottom: 0px;
     }
 }
-
-/* Inicio HERO */
-
-.hero {
-    background-image: url("../images/fondo.jpg");
-    /* ../ para subir carpeta */
-    height: 75vh;
-    background-repeat: no-repeat;
-    /* para que no repita la imagen */
-    background-size: cover;
-    /* para que la imagen cubra el 100% del espacio */
-    background-position: center center;
-    /*para centrar toda la imagen vertical y horizontal*/
-    background-color: #888;
-    /*creamos una capa de color gris para luego suionar, pero la imagen siempre va por encima*/
-    background-blend-mode: multiply;
-    /*para seleccionar modos de fusion de imagen*/
-    display: flex;
-    /*este me alineaa en la horizontak*/
-    align-items: center;
-    /*esto centra al centro centro*/
-}
-
-.hero .container {
-    width: 80%;
-    /*al añadir este with al 100% coloca el text en la izquierda porque el tecxto se alinea a la izquierda por defecto dentro de un contenedor*/
-}
-
-.hero h1 {
-    font-family: var(--fuenteSecundaria);
-    font-size: 2.5em;
-    color: white;
-}
-
-.hero h2 {
-    color: var(--color-principal);
-    font-size: 1.5em;
-    margin: 1em 0;
-}
-
-.hero p {
-    color: white;
-    font-size: 1.15em;
-}
-
-.boton {
-    display: inline-block;
-    /*lo ponemos para que el boton tenga voluminosoidad, con esto se comporta como bloque pero sigue siendo linea, y al reves.*/
-    background-color: var(--color-principal);
-    color: white;
-    padding: 1.15em;
-    text-decoration: none;
-    margin: 1em 0;
-    border: 1px solid var(--color-principal);
-}
-
-.boton i {
-    transition: transform 0.5s;
-}
-
-.boton:hover {
-    background-color: transparent;
-    color: var(--color-principal);
-}
-
-.boton:hover i {
-    transform: translateX(5px);
-    transition: 0.5s;
-}
-
-.hero .social li {
-    display: inline-block;
-    font-size: 2em;
-}
-
-.hero .social a {
-    color: white;
-    text-decoration: none;
-    margin-right: 1em;
-}
-
-/* Fin HERO */
 
 /*  Inicio MAIN */
 
@@ -297,22 +218,37 @@ main section .underline hr {
     top: -0.063em/*para mover un poco la linea y que quede justo donde queremos*/
 }
 
-/*inicio ourservices*/
+/*inicio menu*/
 
-main #ourservices .flex {
+main section .container .menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 98%;
+    padding: 0.7em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+main section .menu .activo {
+    background-color: var(--color-principal);
+    border-radius: 0.2em;
+    font-weight: bold;
+}
+
+main #menutoday .flex {
     flex-wrap: wrap;
     /*esto nos permite decir que ancho tiene cada elemento y que se posicionen 1, 2 o 3 en linea*/
     padding: 0 0.825em;
 }
 
-main #ourservices .flex article {
+main #menutoday .flex article {
     width: 100%;
     padding: 1.825em;
     border-bottom: 1px solid #aaa;
     /*crea una linea divissoria*/
 }
 
-main #ourservices .flex article div i {
+main #menutoday .flex article div i {
     color: var(--color-principal);
     font-size: 2em;
     padding: 0.4em;
@@ -320,12 +256,12 @@ main #ourservices .flex article div i {
     /*todo esto es el icono del articulo*/
 }
 
-main #ourservices .flex article div .fa-truck {
+main #menutoday .flex article div .fa-truck {
     transform: rotateY(180deg);
     /*esto rota el icono*/
 }
 
-main #ourservices .flex article h3 {
+main #menutoday .flex article h3 {
     font-weight: 700;
     margin: 1em 0;
 }
@@ -333,7 +269,6 @@ main #ourservices .flex article h3 {
 .enlace {
     text-decoration: none;
     display: block;
-    /*hay que ponerlo en bloque porque si es un elemento en linea no se puede poner margen*/
     margin-top: 1em;
     color: var(--color-principal);
 }
@@ -352,112 +287,6 @@ main #ourservices .flex article h3 {
     }
 }
 
-@media(min-width:62.750em) {
-    main #ourservices .flex article {
-        width: 33.33%;
-    }
-    main #ourservices .flex article:last-child {
-        width: 33.33%;
-    }
-}
-
-/*fin de ourservices*/
-
-/*inicio about us*/
-
-main #aboutus .flex {
-    flex-direction: column;
-    /*Esto es para poner en columna*/
-}
-
-main #aboutus .flex .columna {
-    padding: 0.825em;
-}
-
-main #aboutus .flex .columna h3 {
-    font-weight: 700;
-}
-
-main #aboutus .flex .columna h4 {
-    color: var(--color-principal);
-    margin: 1em 0;
-}
-
-main #aboutus .marco {
-    border: 3px solid var(--color-principal);
-    transform: rotateZ(10deg);
-    /*Esto gira el marco y la foto */
-    width: 90%;
-    margin: 0 auto;
-    transition: 1s;
-}
-
-main #aboutus .marco img {
-    transform: rotateZ(-10deg);
-    /*Esto sirve para contrarrestar el giro del marco solo en la imagen*/
-    transition: 1s;
-}
-
-main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
-    transform: rotateZ(0deg);
-    /*Esto es para que lo aplique al marco y la imagen*/
-}
-
-@media(min-width:48.000em) {
-    main #aboutus .flex {
-        flex-direction: row;
-        /*paso el sistema flexible de columnas a filas en el primer breakpoint*/
-    }
-}
-
-/*fin about us*/
-
-/*inicio ourblogs*/
-
-main #ourblogs .flex {
-    flex-wrap: wrap;
-    padding: 0 0.825em;
-}
-
-main #ourblogs .flex article {
-    width: 50%;
-    padding: 0.825em;
-    position: relative;
-    /*esto es para poder posicionar el cuadrado de la fecha en la imagen del articulo y que la fecha este respecto del contenedor article*/
-}
-
-main #ourblogs .fecha {
-    background-color: rgba(280, 87, 58, 0.8);
-    color: white;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    font-weight: 700;
-    line-height: 1.5em;
-    padding: 0.5em;
-    position: absolute;
-    /*Con esto el cuadrado sale del encapsulado y puedo colocarlo donde quiera respecto del div que lo contiene*/
-    top: 13px;
-    left: 13px;
-}
-
-main #ourblogs .flex article h3 {
-    font-weight: 700;
-    margin: 1em 0;
-}
-
-main #ourblogs .flex article h4 {
-    font-weight: 400;
-    margin: 1em 0;
-    color: var(--color-principal);
-}
-
-@media(min-width:62.750em) {
-    main #ourblogs .flex article {
-        width: 33.33%;
-    }
-}
-
-/*fin de ourblogs*/
+/* fin menu */
 
 /* Fin MAIN */
