@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueseria</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!--Esta es una clase donde se va a contener toda la pagina-->
+        <header>
+            <div class="nav_top">
+                <!--menu de navegacion superior-->
+                <div class="container flex">
+                    <!--Incluimos los 4 accesos dentro de un contenedor-->
+                    <div>
+                        <a href="">
+                            <i class="fas fa-envelope"></i>
+                            <!--Esto es para el icono de awesome-->
+                            <span>rover@gmail.com</span>
+                            <!--Separamos del icono con un span-->
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <i class="fas fa-phone"></i>
+                            <span>91 456 78 95</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Shopping Cart</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <!--Esta es la barra de navegacion, que ira en vertical para movil y horizontl para desktop-->
+                <div class="container flex">
+                    <!--Siempre incluir el menu en un contenedor-->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.jpg" alt="Rovers">
+                        </a>
+                    </div>
+                    <div class="hamburguesa">
+                        <!--Esto es el icono de tres rayas tipo hamburguesa-->
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <!--hacemos una lista con 5 lis-->
+                        <li><a href="index.html#Home">Home</a></li>
+                        <li><a href="index.html#ourservices">Our Services</a></li>
+                        <li><a href="index.html#aboutus">About Us</a></li>
+                        <li><a href="#ourblogs" class="activo">Our Blogs</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+
+                </div>
+
+
+            </nav>
+        </header>
+
+
+
+
+        <main>
+
+            <section id="ourblogs">
+                <div class="container">
+                    <h2>Our <span>Blogs</span></h2>
+                    <div class="underline">
+                        <hr noshade="noshade">
+                        <!--Esto es para que no ponga bisel noshade-->
+                        <span>X</span>
+                    </div>
+                    <div class="flex">
+                        <article>
+                            <div>
+                                <img src="images/news3.jpg" alt="Mejores platos de la semana">
+                            </div>
+                            <div class="fecha">05 Mar</div>
+                            <h3>Our Weekly Best Foods</h3>
+                            <h4>Posted by Rovers</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam repudiandae ducimus
+                                sed
+                                sint vitae illum</p>
+                            <a href="" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </article>
+
+                        <article>
+                            <div>
+                                <img src="images/news4.jpg" alt="5 razones para visitarnos">
+                            </div>
+                            <div class="fecha">17 Feb</div>
+                            <h3>Top Five Reason To Visit</h3>
+                            <h4>Posted by Rovers</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam repudiandae ducimus
+                                sed
+                                sint vitae illum</p>
+                            <a href="" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </article>
+
+                        <article>
+                            <div>
+                                <img src="images/news1.jpg" alt="Diseño interior del restaurante">
+                            </div>
+                            <div class="fecha">28 Feb</div>
+                            <h3>Restaurant's indside Design</h3>
+                            <h4>Posted by Rovers</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam repudiandae ducimus
+                                sed
+                                sint vitae illum</p>
+                            <a href="" class="enlace">Leer más<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2020 - <a href="">Aviso Legal</a> - <a href="">Cookies</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
