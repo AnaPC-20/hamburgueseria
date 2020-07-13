@@ -224,9 +224,9 @@ main section .container .menu ul li a {
     display: block;
     text-decoration: none;
     color: white;
-    width: 98%;
-    padding: 0.7em;
-    margin: 0 0.5em 0 0.5em;
+    width: 90%;
+    padding: 0.7em 1em;
+    margin: 0 1.5em;
 }
 
 main section .menu .activo {
@@ -235,35 +235,46 @@ main section .menu .activo {
     font-weight: bold;
 }
 
+main #menutoday .container .flex .underline {
+    /*ME he quedao aqui<===*/
+    margin-left: 0;
+    margin-bottom: 3em;
+    width: 3em;
+    color: var(--color-principal);
+}
+
 main #menutoday .flex {
     flex-wrap: wrap;
     /*esto nos permite decir que ancho tiene cada elemento y que se posicionen 1, 2 o 3 en linea*/
-    padding: 0 0.825em;
+}
+
+main #menutoday .flex .cabeceraarticulo {
+    width: 100%;
+    padding: 1.5em;
 }
 
 main #menutoday .flex article {
-    width: 100%;
-    padding: 1.825em;
-    border-bottom: 1px solid #aaa;
-    /*crea una linea divissoria*/
+    width: 90%;
+    padding: 1.5em 3em;
 }
 
-main #menutoday .flex article div i {
-    color: var(--color-principal);
-    font-size: 2em;
-    padding: 0.4em;
-    border: 2px solid var(--color-principal);
-    /*todo esto es el icono del articulo*/
-}
-
-main #menutoday .flex article div .fa-truck {
-    transform: rotateY(180deg);
-    /*esto rota el icono*/
-}
-
-main #menutoday .flex article h3 {
+main #menutoday .flex h3 {
     font-weight: 700;
     margin: 1em 0;
+}
+
+main #menutoday .precio {
+    color: var(--color-principal);
+    text-align: right;
+    font-weight: 700;
+}
+
+/* main #menutoday .menu2columnas {
+    display: flex;
+} */
+
+main #menutoday .menu1, .menu2 {
+    width: 100%;
 }
 
 .enlace {
@@ -273,17 +284,25 @@ main #menutoday .flex article h3 {
     color: var(--color-principal);
 }
 
-@media(min-width:48.00em) {
-    main #ourservices .flex article {
-        width: 50%;
-        padding: 1.825em;
-        border-bottom: 0px;
-        border-left: 1px solid #aaa;
-        margin-bottom: 1em;
-        /*crea una separacion entre las lineas verticales*/
+@media(min-width:62.750em) {
+    main #menutoday .menu1 {
+        width: 30%;
     }
-    main #ourservices .flex article:last-child {
+    main #menutoday .menu2 {
+        width: 70%;
+    }
+    main #menutoday .menu2 div {
+        width: 25%;
+        display: inline-block;
+    }
+    main #menutoday .menu2 .texto {
+        width: 74%;
+        padding-left: 2em;
+        vertical-align: top;
+    }
+    main #menutoday .flex article {
         width: 100%;
+        padding: 0 2em 2em 3em;
     }
 }
 
